@@ -223,11 +223,30 @@ public class LoginDesign extends JFrame {
                 String username = txtUser.getText().trim();
                 String password = String.valueOf(txtPass.getPassword()).trim();
 
-                if (username.isEmpty() || password.isEmpty()) {
+                // if (username.isEmpty() || password.isEmpty()) {
 
+                //     JOptionPane.showMessageDialog(
+                //             loginForm,
+                //             "Please enter username and password!",
+                //             "Warning",
+                //             JOptionPane.WARNING_MESSAGE
+                //     );
+                //     return;
+                // }
+                if (username.isEmpty()) {
                     JOptionPane.showMessageDialog(
                             loginForm,
-                            "Please enter username and password!",
+                            "Please enter username!",
+                            "Warning",
+                            JOptionPane.WARNING_MESSAGE
+                    );
+                    return;
+                }
+                
+                if (password.isEmpty()) {
+                    JOptionPane.showMessageDialog(
+                            loginForm,
+                            "Please enter password!",
                             "Warning",
                             JOptionPane.WARNING_MESSAGE
                     );
